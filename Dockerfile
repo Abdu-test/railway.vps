@@ -7,7 +7,7 @@ ARG Password
 ENV Password=${Password}
 ENV ngrokid=${ngrokid}
 RUN apt install ssh wget curl unzip -y > /dev/null 2>&1
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash
+RUN curl -fsSL https://deb.nodesource.com/setup_19.x | bash
 RUN apt install nodejs -y > /dev/null 2>&1
 RUN wget -O ngrok.zip https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip > /dev/null 2>&1
 RUN unzip ngrok.zip
